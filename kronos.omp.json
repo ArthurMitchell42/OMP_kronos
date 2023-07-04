@@ -49,7 +49,7 @@
           "leading_diamond": "\ue0b6",
           "style": "diamond",
           "trailing_diamond": "\ue0b4 ",
-          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} \uf0622{{ end }}{{ if .Staging.Changed }}<p:git_fg_stage_ch> \uf046 {{ .Staging.String }} \uf443{{ end }} ",
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if .Staging.Changed }}<p:git_fg_stage_ch> \uf046 {{ .Staging.String }} \uf443{{ end }} ",
           "type": "git"
         }
       ]
