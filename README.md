@@ -9,7 +9,7 @@ This is the base file. The features from left to right are:-
   <li>Running user</li>
   <li>Host name, truncated to remove any domain after the machine name such as <b>machine.example.com</b> to show as <b>machine</b>.</li>
   <li>Current working directory, optimised to shorten to two significant directories and directory delimiters.</li>
->  <li>The background of this field will change to a deeper red if the CWD is not writable.</li>
+  <li>The background of this field will change to a deeper red if the CWD is not writable.</li>
   <li>Command status, turns red on the failure of the previous command.</li>
 </ul>
 
