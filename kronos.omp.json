@@ -4,6 +4,7 @@
     "user_bg":         "#8AADF4",
     "user_bg_ssh":     "#e2913b",
     "user_fg":         "#FFFFFF",
+    "user_fg_ssh":     "#011627",
     "path_bg":         "#F5BDE6",
     "path_bg_ro":      "#F57676",
     "path_fg_b":       "#494D64",
@@ -69,6 +70,9 @@
             "{{ if .SSHSession }}p:user_bg_ssh{{ end }}"
           ],
           "foreground": "p:user_fg",
+          "foreground_templates": [
+            "{{ if .SSHSession }}p:user_fg_ssh{{ end }}"
+          ],
           "powerline_symbol": "\ue0b4",
           "style": "diamond",
           "template": "{{if .Root}} \uf0e7 {{end}}{{if .SSHSession}} \ueba9 {{end}}{{.UserName}}@{{ replaceP \"[.].*\" .HostName \"\" }}",
