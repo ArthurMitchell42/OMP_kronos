@@ -2,6 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
     "user_bg":         "#8AADF4",
+    "user_bg_ssh":     "#e2913b",
     "user_fg":         "#FFFFFF",
     "path_bg":         "#F5BDE6",
     "path_bg_ro":      "#F57676",
@@ -64,6 +65,9 @@
         },
         {
           "background": "p:user_bg",
+          "background_templates": [
+            "{{ if .SSHSession }}p:user_bg_ssh{{ end }}"
+          ],
           "foreground": "p:user_fg",
           "powerline_symbol": "\ue0b4",
           "style": "diamond",
@@ -78,11 +82,11 @@
           "foreground": "p:path_fg_a",
           "properties": {
             "folder_icon": "\uf115",
-            "folder_separator_icon": "\uf101",
-            "home_icon": "\ueb06 ",
+            "folder_separator_icon": " \uf101",
+            "home_icon": "\ueb06",
             "mapped_locations_enabled": true,
             "mapped_locations": {
-              "~/Documents/Software": "\uEB00 "
+              "~/Documents/Software": "\uEB00"
             },
             "max_depth": 2,
             "cycle": [ "p:path_fg_a", "p:path_fg_b" ],
