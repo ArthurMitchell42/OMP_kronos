@@ -6,7 +6,7 @@
     "user_fg":         "#FFFFFF",
     "user_fg_ssh":     "#011627",
     "path_bg":         "#F5BDE6",
-    "path_bg_ro":      "#F57676",
+    "path_bg_ro":      "#f45454",
     "path_fg_b":       "#494D64",
     "path_fg_a":       "#191D34",
     "git_bg":          "#B7BDF8",
