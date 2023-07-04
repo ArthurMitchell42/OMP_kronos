@@ -2,7 +2,7 @@
 Templates for Oh My Posh
 
 ## Examples
-###kronos.omp.json
+### kronos.omp.json
 This is the base file. The features from left to right are:-
 <ul>
   <li>OS Flavour</li>
