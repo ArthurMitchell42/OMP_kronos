@@ -75,7 +75,7 @@
             "{{ if .SSHSession }}p:user_fg_ssh{{ end }}"
           ],
           "powerline_symbol": "\ue0b4",
-          "style": "diamond",
+          "style": "powerline",
           "template": "{{if .Root}} \uf0e7 {{end}}{{if .SSHSession}} \uf43d {{end}}{{.UserName}}@{{ replaceP \"[.].*\" .HostName \"\" }}",
           "type": "session"
         },
