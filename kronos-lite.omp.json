@@ -94,8 +94,6 @@
               "~/Documents/Software": "\uF09B"
             },
             "max_depth": 2,
-            "cycle": [ "p:path_fg_a", "p:path_fg_b" ],
-            "cycle_folder_separator": true,
             "style": "agnoster_short"
           },
           "powerline_symbol": "\ue0b4",
