@@ -87,7 +87,7 @@
           "foreground": "p:path_fg_a",
           "properties": {
             "folder_icon": "\uf115",
-            "folder_separator_icon": " \uf101",
+            "folder_separator_icon": " \uf101 ",
             "home_icon": "\uf46d",
             "mapped_locations_enabled": true,
             "mapped_locations": {
