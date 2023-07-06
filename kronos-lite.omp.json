@@ -58,6 +58,9 @@
       "segments": [
         {
           "background": "p:user_bg",
+          "background_templates": [
+            "{{ if .Segments.Session.SSHSession }}p:user_bg_ssh{{ end }}"
+          ],
           "foreground": "p:user_fg",
           "powerline_symbol": "\ue0b4",
           "leading_diamond": "\ue0b6",
