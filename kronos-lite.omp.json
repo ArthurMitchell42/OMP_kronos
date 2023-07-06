@@ -62,6 +62,9 @@
             "{{ if .Segments.Session.SSHSession }}p:user_bg_ssh{{ end }}"
           ],
           "foreground": "p:user_fg",
+          "foreground_templates": [
+            "{{ if .Segments.Session.SSHSession }}p:user_fg_ssh{{ end }}"
+          ],
           "powerline_symbol": "\ue0b4",
           "leading_diamond": "\ue0b6",
           "style": "diamond",
