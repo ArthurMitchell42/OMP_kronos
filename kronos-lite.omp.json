@@ -107,7 +107,7 @@
           },
           "powerline_symbol": "\ue0b4",
           "style": "powerline",
-          "template": "{{ if not .Writable }} \uf456{{ end }} {{ .Path }} ",
+          "template": "{{ if not .Writable }} \uf456{{ end }} {{ path .Path .Location }} ",
           "type": "path"
         },
         {
@@ -121,7 +121,7 @@
             "always_enabled": true
           },
           "style": "powerline",
-          "template": " {{ if gt .Code 0 }}\uf421{{ else }}\uf42e{{ end }} {{ url \"\uf015\" \"http:10.0.10.10:5000\" }} ",
+          "template": " {{ if gt .Code 0 }}\uf421{{ else }}\uf42e{{ end }} ",
           "type": "exit"
         }        
       ],
