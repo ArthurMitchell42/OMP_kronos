@@ -1,5 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "console_title_template": "{{.UserName}}@{{.HostName}} {{.Shell}} in {{.PWD}}", 
   "palette": {
     "user_bg":         "#8AADF4",
     "user_bg_ssh":     "#e2913b",
@@ -82,7 +83,7 @@
           ],
           "powerline_symbol": "\ue0b4",
           "style": "diamond",
-          "template": "{{if .Root}} \uf41e {{end}}{{if .SSHSession}} \uf43d {{end}}{{.UserName}}@{{ replaceP \"[.].*\" .HostName \"\" }}",
+          "template": "{{if .Root}} \uf41e {{end}}{{if .SSHSession}} \uf43d {{end}}{{.UserName}}@{{$hn:=replaceP \"[.].*\" .HostName \"\" }}{{trunc 8 $hn}} ",
           "type": "session"
         },
         {
@@ -107,7 +108,7 @@
           },
           "powerline_symbol": "\ue0b4",
           "style": "powerline",
-          "template": "{{ if not .Writable }} \uf456{{ end }} {{ path .Path .Location }} ",
+          "template": "{{ if not .Writable }} \uf456{{ end }} {{if .Segments.Session.SSHSession}}{{ $sftp := list \"sftp://\" .UserName \"@\" .HostName .Segments.Path.Location | join \"\"}}{{ url .Path $sftp }}{{else}}{{ path .Path .Location }}{{end}} ",
           "type": "path"
         },
         {

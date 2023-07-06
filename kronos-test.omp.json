@@ -83,7 +83,7 @@
           ],
           "powerline_symbol": "\ue0b4",
           "style": "diamond",
-          "template": "{{if .Root}} \uf41e {{end}}{{if .SSHSession}} \uf43d {{end}}{{.UserName}}@{{ replaceP \"[.].*\" .HostName \"\" }}",
+          "template": "{{if .Root}} \uf41e {{end}}{{if .SSHSession}} \uf43d {{end}}{{.UserName}}@{{$hn:=replaceP \"[.].*\" .HostName \"\" }}{{trunc 8 $hn}} ",
           "type": "session"
         },
         {
