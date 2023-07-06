@@ -5,10 +5,10 @@
     "user_bg_ssh":     "#e2913b",
     "user_fg":         "#FFFFFF",
     "user_fg_ssh":     "#494D64",
-    "path_bg":         "#F5BDE6",
+    "path_bg_rw":      "#F5BDE6",
     "path_bg_ro":      "#f45454",
-    "path_fg_a":       "#494D64",
-    "path_fg_b":       "#191D34",
+    "path_fg_rw":      "#494D64",
+    "path_fg_ro":      "#DAEAEA",
     "git_bg":          "#B7BDF8",
     "git_bg_changed":  "#ffeb95",
     "git_bg_ahdbhnd":  "#c5e478",
@@ -86,11 +86,14 @@
           "type": "session"
         },
         {
-          "background": "p:path_bg",
+          "background": "p:path_bg_rw",
           "background_templates": [
             "{{ if not .Writable }}p:path_bg_ro{{ end }}"
           ],
-          "foreground": "p:path_fg_a",
+          "foreground": "p:path_fg_rw",
+          "foreground_templates": [
+            "{{ if not .Writable }}p:path_fg_ro{{ end }}"
+          ],
           "properties": {
             "folder_icon": "\uf115",
             "folder_separator_icon": " \uf101 ",
@@ -104,7 +107,7 @@
           },
           "powerline_symbol": "\ue0b4",
           "style": "powerline",
-          "template": " {{ .Path }} ",
+          "template": "{{ if not .Writable }} \uf456{{ end }} {{ .Path }} ",
           "type": "path"
         },
         {
@@ -118,7 +121,7 @@
             "always_enabled": true
           },
           "style": "powerline",
-          "template": " {{ if gt .Code 0 }}\uf421{{ else }}\uf42e{{ end }} ",
+          "template": " {{ if gt .Code 0 }}\uf421{{ else }}\uf42e{{ end }} {{ url \"\uf015\" \"http:10.0.10.10:5000\" }} ",
           "type": "exit"
         }        
       ],
