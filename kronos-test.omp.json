@@ -87,20 +87,6 @@
           "type": "session"
         },
         {
-          "background": "p:user_bg",
-          "background_templates": [
-            "{{ if .SSHSession }}p:user_bg_ssh{{ end }}"
-          ],
-          "foreground": "p:user_fg",
-          "foreground_templates": [
-            "{{ if .SSHSession }}p:user_fg_ssh{{ end }}"
-          ],
-          "powerline_symbol": "\ue0b4",
-          "style": "diamond",
-          "template": "{{ $sftp := list \"sftp://\" .UserName \"@\" .HostName .Segments.Path.Location | join \"\"}} My planet is {{$sftp}} {{ url \"\uF40D\" $sftp }} ",
-          "type": "session"
-        },
-        {
           "background": "p:path_bg_rw",
           "background_templates": [
             "{{ if not .Writable }}p:path_bg_ro{{ end }}"
