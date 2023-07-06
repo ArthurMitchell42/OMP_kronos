@@ -91,7 +91,7 @@
           "properties": {
             "folder_icon": "\uf115",
             "folder_separator_icon": " \uf101 ",
-            "home_icon": "\uf46d",
+            "home_icon": "\uf015",
             "mapped_locations_enabled": true,
             "mapped_locations": {
               "~/Documents/Software": "\uF09B"
