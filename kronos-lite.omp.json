@@ -83,7 +83,7 @@
           ],
           "powerline_symbol": "\ue0b4",
           "style": "diamond",
-          "template": "{{if .Root}} \uf41e {{end}}{{if .SSHSession}} \uf43d {{end}}{{.UserName}}@{{ $l:=len .HostName }}{{ if gt $l 9 }}{{trunc 8 .HostName}}\uF434{{else}}.HostName{{ end }} ",
+          "template": "{{if .Root}} \uf41e {{end}}{{if .SSHSession}} \uf43d {{end}}{{.UserName}}@{{$hn:=replaceP \"[.].*\" .HostName \"\" }}{{ $l:=len $hn }}{{ if gt $l 9 }}{{trunc 8 $hn}}\uF434{{ else }}{{$hn}}{{ end }} ",
           "type": "session"
         },
         {
