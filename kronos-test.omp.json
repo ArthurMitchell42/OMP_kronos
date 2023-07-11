@@ -87,6 +87,20 @@
           "type": "session"
         },
         {
+          "background": "p:user_bg",
+          "background_templates": [
+            "{{ if .SSHSession }}p:user_bg_ssh{{ end }}"
+          ],
+          "foreground": "p:user_fg",
+          "foreground_templates": [
+            "{{ if .SSHSession }}p:user_fg_ssh{{ end }}"
+          ],
+          "powerline_symbol": "\ue0b4",
+          "style": "diamond",
+          "template": "{{.UserName}}@{{ $l:=len .HostName }}{{ if gt $l 9 }}{{trunc 8 .HostName}}\uF434{{else}}.HostName{{ end }} ",
+          "type": "session"
+        },
+        {
           "background": "p:path_bg_rw",
           "background_templates": [
             "{{ if not .Writable }}p:path_bg_ro{{ end }}"
