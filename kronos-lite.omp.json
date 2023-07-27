@@ -52,6 +52,15 @@
           "trailing_diamond": "\ue0b4 ",
           "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if .Staging.Changed }}<p:git_fg_stage_ch> \uf046 {{ .Staging.String }} \uf443{{ end }} ",
           "type": "git"
+        },
+        {
+          "type": "python",
+          "powerline_symbol": "\ue0b4",
+          "style": "diamond",
+          "trailing_diamond": "\ue0b4 ",
+          "background": "p:path_bg_rw",
+          "foreground": "p:path_fg_rw",
+          "template": "\uE235 {{.Venv}}"
         }
       ]
     },    {
