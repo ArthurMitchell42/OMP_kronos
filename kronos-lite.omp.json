@@ -57,6 +57,16 @@
           "{{ if gt .Ahead 0 }}p:git_bg_ahead{{ end }}",
           "{{ if gt .Behind 0 }}p:git_bg_behind{{ end }}"
           ]
+        },
+        {
+          "type": "python",
+          "style": "diamond",
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4 ",
+          "foreground": "#ffd43b",
+          "background": "#306998",
+          "display_mode": "environment",
+          "template": "  {{ .Venv }} "
         }
       ]
     },
@@ -132,9 +142,6 @@
             "always_enabled": true
           }
         }
-
-
-
       ]
     }
   ]
