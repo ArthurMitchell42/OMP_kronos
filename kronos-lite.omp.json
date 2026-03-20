@@ -150,7 +150,7 @@
           "style": "powerline",
           "foreground": "p:cmd_fg",
           "background": "p:cmd_bg_good",
-          "template": "{{ if gt .Code 0 }}\uf421{{ else }}\uf42e{{ end }} ",
+          "template": " {{ if gt .Code 0 }}\uf421{{ else }}\uf42e{{ end }} ",
           "powerline_symbol": "\ue0b4",
           "background_templates": [
             "{{ if gt .Code 0 }}p:cmd_bg_bad{{ end }}"
