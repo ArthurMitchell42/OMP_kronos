@@ -10,7 +10,8 @@
     },
     "host_name": {
       "uPrecision.mitchell.click": "\u00b5P",
-      "pi5.mitchell.click": "\u03C05"
+      "pi5.mitchell.click": "\u03C05",
+      "pi-test.mitchell.click": "\u03C0-Tst"
     }
   },
   "palette": {
