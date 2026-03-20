@@ -32,7 +32,8 @@
     "user_bg_ssh": "#e2913b",
     // "user_fg": "#FFFFFF",
     "user_fg": "#000000",
-    "user_fg_ssh": "#494D64"
+    // "user_fg_ssh": "#494D64"
+    "user_fg_ssh": "#201020"
   },
   "console_title_template": "{{.UserName}}@{{.HostName}} {{.Shell}} in {{.PWD}}",
   "blocks": [
