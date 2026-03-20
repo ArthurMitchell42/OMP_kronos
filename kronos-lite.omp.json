@@ -104,7 +104,7 @@
         },
         {
           // "template": "{{if .Root}} \uf41e {{end}}{{if .SSHSession}} \uf43d {{end}}{{.UserName}}@{{$hn:=replaceP \"[.].*\" .HostName \"\" }}{{ $l:=len $hn }}{{ if gt $l 9 }}{{trunc 8 $hn}}\uf434{{ else }}{{$hn}}{{ end }} ",
-          "template": "{{if .Root}} \uf41e {{end}}{{if .SSHSession}} \uf43d {{end}}{{.UserName}}@{{.HostName}}",
+          "template": "{{if .Root}} \uf41e {{end}}{{if .SSHSession}}  \ueba9 \uf43d {{end}}{{.UserName}}@{{.HostName}}",
           "foreground": "p:user_fg",
           "powerline_symbol": "\ue0b4",
           "background": "p:user_bg",
