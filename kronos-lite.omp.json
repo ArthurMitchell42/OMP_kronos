@@ -2,6 +2,16 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "version": 4,
   "final_space": true,
+  "maps": {
+    "user_name": {
+      "arthurm": "am",
+      "arthur": "a",
+      "root": "⚡"
+    },
+    "host_name": {
+      "uPrecision.mitchell.click": "\u00b5P"
+    }
+  },
   "palette": {
     "cmd_bg_bad": "#CC1010",
     "cmd_bg_good": "#4caf50",
@@ -19,7 +29,8 @@
     "path_fg_rw": "#494D64",
     "user_bg": "#8AADF4",
     "user_bg_ssh": "#e2913b",
-    "user_fg": "#FFFFFF",
+    // "user_fg": "#FFFFFF",
+    "user_fg": "#000000",
     "user_fg_ssh": "#494D64"
   },
   "console_title_template": "{{.UserName}}@{{.HostName}} {{.Shell}} in {{.PWD}}",
@@ -90,7 +101,8 @@
           "template": "{{.Icon}} "
         },
         {
-          "template": "{{if .Root}} \uf41e {{end}}{{if .SSHSession}} \uf43d {{end}}{{.UserName}}@{{$hn:=replaceP \"[.].*\" .HostName \"\" }}{{ $l:=len $hn }}{{ if gt $l 9 }}{{trunc 8 $hn}}\uf434{{ else }}{{$hn}}{{ end }} ",
+          // "template": "{{if .Root}} \uf41e {{end}}{{if .SSHSession}} \uf43d {{end}}{{.UserName}}@{{$hn:=replaceP \"[.].*\" .HostName \"\" }}{{ $l:=len $hn }}{{ if gt $l 9 }}{{trunc 8 $hn}}\uf434{{ else }}{{$hn}}{{ end }} ",
+          "template": "{{if .Root}} \uf41e {{end}}{{if .SSHSession}} \uf43d {{end}}{{.UserName}}@{{.HostName}}",
           "foreground": "p:user_fg",
           "powerline_symbol": "\ue0b4",
           "background": "p:user_bg",
@@ -133,7 +145,7 @@
           "style": "powerline",
           "foreground": "p:cmd_fg",
           "background": "p:cmd_bg_good",
-          "template": " {{ if gt .Code 0 }}\uf421{{ else }}\uf42e{{ end }} ",
+          "template": "{{ if gt .Code 0 }}\uf421{{ else }}\uf42e{{ end }} ",
           "powerline_symbol": "\ue0b4",
           "background_templates": [
             "{{ if gt .Code 0 }}p:cmd_bg_bad{{ end }}"
