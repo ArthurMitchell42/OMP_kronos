@@ -130,7 +130,8 @@
             "{{ if not .Writable }}p:path_bg_ro{{ end }}"
           ],
           // "template": "{{ if not .Writable }} \uf456{{ end }} {{if .Segments.Session.SSHSession}}{{ $sftp := list \"sftp://\" .UserName \"@\" .HostName .Segments.Path.Location | join \"\"}}{{ url .Path $sftp }}{{else}}{{ path .Path .Location }}{{end}} ",
-          "template": "{{ if not .Writable }} \uf456{{ end }} {{ if .Segments.Session.SSHSession }}{{ $sftp := list \"sftp://\" .UserName \"@\" .HostName .Segments.Path.Location | join \"\" }}{{ url .Path $sftp }}{{ else }}{{ path .Path .Location }}{{ end }} ",
+          // "template": "{{ if not .Writable }} \uf456{{ end }} {{ if .Segments.Session.SSHSession }}{{ $sftp := list \"sftp://\" .UserName \"@\" .HostName .Segments.Path.Location | join \"\" }}{{ url .Path $sftp }}{{ else }}{{ path .Path .Location }}{{ end }} ",
+          "template": "{{ if not .Writable }} \uf456{{ end }} {{ path .Path .Location }} ",
           // "template": "{{ if not .Writable }} \uf456{{ end }} {{ path .Path .Location }}{{end}} ",
           "options": {
             "folder_icon": "\uf115",
