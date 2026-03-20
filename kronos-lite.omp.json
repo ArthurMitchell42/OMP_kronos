@@ -103,13 +103,31 @@
           "template": "{{.Icon}} "
         },
         {
-          // "template": "{{if .Root}} \uf41e {{end}}{{if .SSHSession}} \uf43d {{end}}{{.UserName}}@{{$hn:=replaceP \"[.].*\" .HostName \"\" }}{{ $l:=len $hn }}{{ if gt $l 9 }}{{trunc 8 $hn}}\uf434{{ else }}{{$hn}}{{ end }} ",
-          "template": "{{if .Root}}\uf41e {{end}}{{if .SSHSession}}\ueba9 {{end}}{{.UserName}}@{{.HostName}}",
-          "foreground": "p:user_fg",
-          "powerline_symbol": "\ue0b4",
-          "background": "p:user_bg",
+          "type": "battery",
+          "style": "powerline",
+          "powerline_symbol": "",
+          "foreground": "#193549",
+          "background": "#ffeb3b",
+          "background_templates": [
+            "{{if eq \"Charging\" .State.String}}#40c4ff{{end}}",
+            "{{if eq \"Discharging\" .State.String}}#ff5722{{end}}",
+            "{{if eq \"Full\" .State.String}}#4caf50{{end}}"
+          ],
+          "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }} ",
+          "options": {
+            "discharging_icon": " ",
+            "charging_icon": " ",
+            "charged_icon": " "
+          }
+        },
+        {
           "type": "session",
           "style": "diamond",
+          "foreground": "p:user_fg",
+          "background": "p:user_bg",
+          "powerline_symbol": "\ue0b4",
+          // "template": "{{if .Root}} \uf41e {{end}}{{if .SSHSession}} \uf43d {{end}}{{.UserName}}@{{$hn:=replaceP \"[.].*\" .HostName \"\" }}{{ $l:=len $hn }}{{ if gt $l 9 }}{{trunc 8 $hn}}\uf434{{ else }}{{$hn}}{{ end }} ",
+          "template": "{{if .Root}}\uf41e {{end}}{{if .SSHSession}}\ueba9 {{end}}{{.UserName}}@{{.HostName}}",
           "foreground_templates": [
             "{{ if .SSHSession }}p:user_fg_ssh{{ end }}"
           ],
