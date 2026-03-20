@@ -140,7 +140,8 @@
             "max_depth": 2,
             "folder_separator_icon": " \uf101 ",
             "mapped_locations": {
-              "~/Documents/Software": "\uf09b"
+              "~/Documents/Software": "\uf09b",
+              "/docker": "\uf308"
             },
             "mapped_locations_enabled": true
           }
