@@ -11,7 +11,8 @@
     "host_name": {
       "uPrecision.mitchell.click": "\u00b5P",
       "pi5.mitchell.click": "\u03C05",
-      "pi-test.mitchell.click": "\u03C0-Tst"
+      "pi-test.mitchell.click": "\u03C0-Tst",
+      "Docker-LXC": "D-LXC"
     }
   },
   "palette": {
