@@ -87,7 +87,7 @@
           "foreground": "#ffd43b",
           "background": "#306998",
           "display_mode": "environment",
-          "template": "  {{ .Venv }} "
+          "template": " \ue73c {{ .Venv }} "
         }
       ]
     },
@@ -98,7 +98,9 @@
         {
           "type": "battery",
           "style": "powerline",
+          // "leading_powerline_symbol": "\ue0b4",
           "leading_powerline_symbol": "\ue0b6",
+          // "leading_powerline_symbol": " ",
           // "powerline_symbol": "",
           // "leading_diamond": "\ue0b6",
           "powerline_symbol": "\ue0b4",
@@ -112,9 +114,10 @@
           ],
           "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}%",
           "options": {
-            "discharging_icon": " ",
-            "charging_icon": " ",
-            "charged_icon": " "
+            "discharging_icon": "󰂌  ",
+            "charging_icon": "󰂄  ",
+            "charged_icon": "󰂂  ",
+            "not_charging_icon": "󰂃 "
           }
         },
         {
@@ -168,7 +171,8 @@
             "home_icon": "\uf015",
             "style": "agnoster_short",
             "max_depth": 2,
-            "folder_separator_icon": " \uf101 ",
+            // "folder_separator_icon": " \uf101 ",
+            "folder_separator_icon": " \uf105 ",
             "mapped_locations": {
               "~/Documents/Software": "\uf09b",
               "/docker": "\uf308"
